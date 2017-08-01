@@ -39,7 +39,7 @@ public class ComparatorDemo {
 
         // !! - Write a lambda to sort by city alphabetically
 
-        Collections.sort(addresses, (o1,o2) -> o1.getCity().compareTo(o2.getCity()));
+        Collections.sort(addresses, (Address o1 ,Address o2) -> o1.getCity().compareTo(o2.getCity()));
 
         System.out.println("\nAfter sorting by city");
         print(addresses);

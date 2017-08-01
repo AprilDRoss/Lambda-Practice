@@ -2,22 +2,25 @@ public class RunnableDemo {
     public static void main(String[] args) {
 
         // !! - Write an anonymous Runnable class here
-        class Runnable {
 
-          public static run(){
+
+
+
+        //It can just print out "Anonymous run" or similar
+        Runnable anonRun = new Runnable() {
+            public void run() {
+
                 System.out.println("Anonymous run.");
             }
-        }
-        //It can just print out "Anonymous run" or similar
-        Runnable anonRun = new Runnable();
+        };
 
                 anonRun.run();
 
         // !! - Write a lambda function here
         //It can also print out something like "Lambda run"
-        Runnable lambdaRun = new Runnable();
+        Runnable lambdaRun = ( () -> System.out.println("Lambda run."));
 
-         e -> lambdaRun.run() == System.out.println("Lambda run.");
+        lambdaRun.run();
 
     }
 }
